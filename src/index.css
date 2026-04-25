@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+html {
+  width: 100%;
+  margin: 0;
+  min-height: 100%;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: black;
+  margin: 0;
+}
+
+main {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  min-height: 750px;
+  width: 100%;
+  max-width: 650px;
+  min-width: 500px;
+  border-radius: 5px;
+  background-color: #4d4d4f;
+  padding: 20px;
+}
+header {
+  text-align: center;
+  color: rgb(223, 223, 223);
+  width: 100%;
+}
+header > span {
+  display: block;
+  font-size: 13px;
+  opacity: 0.7;
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+}
+header > h1 {
+  font-size: 25px;
+}
+.game-status {
+  text-align: center;
+  color: white;
+  height: 75px;
+  width: 300px;
+  background-color: #10a95b;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-top: 15px;
+  display: flex;
+
+  flex-direction: column;
+}
+.game-status > p,
+h2 {
+  margin: 0;
+  padding-top: 8px;
+}
+
+.languages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-block: 30px;
+  max-width: 350px;
+}
+.chip {
+  padding: 5px 5px;
+  box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.panel {
+  display: flex;
+  gap: 20px;
+  font-size: 20px;
+  font-weight: 400px;
+  margin-top: 20px;
+}
+.panel > span {
+  border-bottom: rgb(245, 245, 245, 0.4) solid;
+  height: 40px;
+  width: 40px;
+  background-color: #323232;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255, 0.7);
+}
+.panel > span.wrong-letters {
+  color: #ec5d49;
+}
+.panel > span.correct-letters {
+  color: #10a95b;
+}
+
+.chip.lost {
+  opacity: 0.1;
+}
+
+.keyboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 350px;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 5rem;
+}
+
+.keyboard > button {
+  height: 30px;
+  width: 30px;
+  border-radius: 100px;
+  background-color: #fcba28;
+  cursor: pointer;
+}
+.keyboard > button.correct {
+  background-color: #10a95b;
+}
+.keyboard > button.wrong {
+  background-color: #ec5d49;
+}
+.newGame {
+  height: 30px;
+  width: 90px;
+  margin-top: 30px;
+  background-color: aqua;
+  border-radius: 5px;
+}
+.correct {
+  background-color: #10a95b;
+}
+.wrong {
+  background-color: rgb(220, 20, 60, 0.5);
+}
+.keyboard > button.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
