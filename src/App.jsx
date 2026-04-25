@@ -17,8 +17,6 @@ export default function App() {
   const [currentWord, setCurrentWord] = useState(() => newRandomWord());
   const [guessedLetters, setGuessedLetters] = useState([]);
 
-  console.log(currentWord);
-
   let wrongGuessCount = guessedLetters.filter(
     (letter) => !currentWord.toLowerCase().includes(letter.toLowerCase()),
   ).length;
