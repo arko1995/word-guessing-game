@@ -23,8 +23,7 @@ main {
   flex-direction: column;
   min-height: 750px;
   width: 100%;
-  max-width: 650px;
-  min-width: 500px;
+  width: min(100%, 30rem);
   border-radius: 5px;
   background-color: #4d4d4f;
   padding: 20px;
@@ -81,7 +80,7 @@ h2 {
   display: flex;
   gap: 20px;
   font-size: 20px;
-  font-weight: 400px;
+  font-weight: 400;
   margin-top: 20px;
 }
 .panel > span {
@@ -155,4 +154,50 @@ h2 {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
+}
+
+@media (max-width: 480px) {
+  body {
+    align-items: flex-start;
+  }
+
+  main {
+    min-height: 100vh;
+    width: 100%;
+    border-radius: 0;
+    padding: 16px;
+  }
+
+  .game-status {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .languages {
+    max-width: 100%;
+    margin-block: 20px;
+  }
+
+  .panel {
+    gap: 8px;
+    font-size: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .panel > span {
+    width: 34px;
+    height: 38px;
+  }
+
+  .keyboard {
+    max-width: 100%;
+    gap: 8px;
+    margin-top: 3rem;
+  }
+
+  .keyboard > button {
+    width: 34px;
+    height: 34px;
+  }
 }
